@@ -16,7 +16,7 @@ class ItemSubfileSpec extends SitemapSpec with BeforeAndAfter with ItemSubfile {
   before {
 
     val tempDir = Files.createTempDirectory("ItemSubfileSpec").toFile
-    subfiles = createItemSubfiles(loadSomeDotJson, timestamp, tempDir).toList
+    subfiles = createItemSubfiles(someDotJson, timestamp, tempDir).toList
     xml = XML.loadFile(subfiles.head)
   }
 
