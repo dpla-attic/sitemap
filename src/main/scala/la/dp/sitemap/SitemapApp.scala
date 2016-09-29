@@ -6,6 +6,15 @@ import java.time.format.DateTimeFormatter
 import java.util.Date
 import java.util.zip.GZIPInputStream
 
+
+/**
+  * Parses DPLA JSON and uses it to build a sitemap of all the contained items for Google and other crawlers to find
+  * DPLA content.
+  *
+  * @see http://www.sitemaps.org/
+  * @see https://dp.la/info/developers/download/
+  *
+  */
 object SitemapApp extends App with ItemSubfile with SitemapFile {
 
   val start = new Date().getTime

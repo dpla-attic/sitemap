@@ -4,6 +4,10 @@ import java.io.File
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 
+/**
+  * A mixin for writing files to a directory.
+  */
+
 trait FileWriter {
 
   def write(dir: File, name: String, data: String): File = {

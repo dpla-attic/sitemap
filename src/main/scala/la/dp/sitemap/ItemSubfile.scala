@@ -2,6 +2,10 @@ package la.dp.sitemap
 
 import java.io.{File, InputStream}
 
+/**
+  * Given a stream of JSON nodes, a timestamp, and a path to write to, creates sitemap subfiles with 10,000 items each.
+  */
+
 trait ItemSubfile extends FileWriter {
 
   def buildSubfile(timestamp: String, ids: Iterable[String]): String = {

@@ -2,6 +2,12 @@ package la.dp.sitemap
 
 import java.io.File
 
+/**
+  * Given a list of subfiles and a URL fragment where they will eventually reside, and a parent directory,
+  * creates a top-level sitemap file in that parent directory.
+  *
+  */
+
 trait SitemapFile extends FileWriter {
 
   def createSitemap(baseUrl: String, subfiles: Iterator[File], timestamp: String, parentDirectory: File): File  = {
