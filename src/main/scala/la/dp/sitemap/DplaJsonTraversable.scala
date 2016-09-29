@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.{JsonNode, ObjectMapper}
 
 class DplaJsonTraversable(inputStream: InputStream) extends Traversable[JsonNode] {
 
+  override def hasDefiniteSize = false
+
   override def foreach[U](f: (JsonNode) => U): Unit = {
 
     try {
