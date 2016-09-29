@@ -1,4 +1,4 @@
-name := "dpla-json-to-parquet"
+name := "sitemap"
 
 version := "1.0"
 
@@ -13,3 +13,5 @@ libraryDependencies ++= List(
 ).map(p => jacksonOrg % p % jacksonVersion)
 
 libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.0.4"
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test"
