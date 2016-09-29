@@ -11,20 +11,11 @@ trait ItemSubfile extends FileWriter {
   def buildSubfile(timestamp: String, ids: Iterable[String]): String = {
 
     val urls = ids.map(
-      id => {
-        <url>
-          <loc>
-            {"https://dp.la/item/" + id}
-          </loc> <lastmod>
-          {timestamp}
-        </lastmod> <changefreq>monthly</changefreq>
-        </url>
-      }
+      id =>
+      {<url><loc>{"https://dp.la/item/" + id}</loc><lastmod>{timestamp}</lastmod><changefreq>monthly</changefreq></url>}
     )
 
-    val xml = <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      {urls}
-    </urlset>
+    val xml = <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>
 
     xml.buildString(true)
   }
