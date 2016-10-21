@@ -30,7 +30,7 @@ trait ItemSubfile extends FileWriter {
     ).map(
       jsonNode => jsonNode.path("_source").path("id").asText()
 
-    ).toIterable.grouped(10000).zipWithIndex.map(
+    ).toIterable.grouped(50000).zipWithIndex.map(
       pair => {
         val ids = pair._1
         val sequence = pair._2
