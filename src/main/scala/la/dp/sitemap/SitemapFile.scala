@@ -20,6 +20,6 @@ trait SitemapFile extends FileWriter {
     val xmlData =
       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sitemapElements}</sitemapindex>
 
-    write(parentDirectory, "sitemap.xml", xmlData.toString)
+    write(parentDirectory, "all_item_urls.xml", xmlData.toString)
   }
 }
